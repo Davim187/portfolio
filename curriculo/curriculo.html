@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Currículo — Francisco Davi Morais Barros</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @page {
+        size: A4;
+        margin: 16mm 18mm;
+      }
+
+      :root {
+        --text: #1e293b;
+        --muted: #52607a;
+        --accent: #0369a1;
+        --line: #d7e0ea;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", "Noto Sans", "Ubuntu Sans", Arial, sans-serif;
+        font-size: 10pt;
+        line-height: 1.55;
+        color: var(--text);
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      header {
+        padding-bottom: 12pt;
+        border-bottom: 2pt solid var(--accent);
+        margin-bottom: 18pt;
+      }
+
+      h1 {
+        font-size: 22pt;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+        line-height: 1.1;
+      }
+
+      .role {
+        font-size: 11.5pt;
+        font-weight: 600;
+        color: var(--accent);
+        margin-top: 3pt;
+      }
+
+      .contacts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3pt 14pt;
+        margin-top: 8pt;
+        font-size: 8.8pt;
+        color: var(--muted);
+      }
+
+      .contacts span strong {
+        color: var(--text);
+        font-weight: 600;
+      }
+
+      section {
+        margin-bottom: 18pt;
+      }
+
+      section:last-child {
+        margin-bottom: 0;
+      }
+
+      h2 {
+        font-size: 10.5pt;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--accent);
+        padding-bottom: 3pt;
+        border-bottom: 1pt solid var(--line);
+        margin-bottom: 9pt;
+      }
+
+      p {
+        color: var(--muted);
+      }
+
+      .skills {
+        display: grid;
+        grid-template-columns: 100pt 1fr;
+        gap: 4pt 10pt;
+      }
+
+      .skills dt {
+        font-weight: 600;
+      }
+
+      .skills dd {
+        color: var(--muted);
+      }
+
+      .company {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 8pt;
+      }
+
+      .company h3 {
+        font-size: 11pt;
+        font-weight: 700;
+      }
+
+      .company span {
+        font-size: 8.8pt;
+        color: var(--muted);
+      }
+
+      .job {
+        position: relative;
+        padding-left: 11pt;
+        margin-bottom: 10pt;
+        break-inside: avoid;
+      }
+
+      .job::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5pt;
+        width: 5pt;
+        height: 5pt;
+        border-radius: 50%;
+        background: var(--accent);
+      }
+
+      .job-head {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 8pt;
+      }
+
+      .job-head h4 {
+        font-size: 10pt;
+        font-weight: 600;
+      }
+
+      .date {
+        font-size: 8.8pt;
+        font-weight: 500;
+        color: var(--muted);
+        white-space: nowrap;
+      }
+
+      ul {
+        margin-top: 3pt;
+        padding-left: 12pt;
+      }
+
+      li {
+        margin-bottom: 1.5pt;
+      }
+
+      li::marker {
+        color: var(--accent);
+      }
+
+      .edu {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 5pt;
+      }
+
+      .edu h4 {
+        font-size: 10pt;
+        font-weight: 600;
+      }
+
+      .edu span {
+        color: var(--muted);
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Francisco Davi Morais Barros</h1>
+      <div class="role">Desenvolvedor Full-Stack</div>
+      <div class="contacts">
+        <span><strong>Fortaleza, CE</strong> — Brasil</span>
+        <span><strong>Telefone/WhatsApp:</strong> (85) 98570-7259</span>
+        <span><strong>E-mail:</strong> <a href="mailto:daviimorais39@gmail.com">daviimorais39@gmail.com</a></span>
+        <span
+          ><strong>LinkedIn:</strong>
+          <a href="https://www.linkedin.com/in/davi-morais-46680b23a/">linkedin.com/in/davi-morais-46680b23a</a></span
+        >
+        <span><strong>GitHub:</strong> <a href="https://github.com/Davim187">github.com/Davim187</a></span>
+        <span
+          ><strong>Portfólio:</strong> <a href="https://davim187.github.io/portifolio/">davim187.github.io/portifolio</a></span
+        >
+      </div>
+    </header>
+
+    <section>
+      <h2>Resumo profissional</h2>
+      <p>
+        Desenvolvedor Full-Stack com foco em back-end e mais de 4 anos em TI. Crio APIs em Node.js e TypeScript,
+        automações com n8n e interfaces em React. Vim do suporte técnico, o que me deu visão do usuário final e
+        facilidade para diagnosticar problemas.
+      </p>
+    </section>
+
+    <section>
+      <h2>Competências técnicas</h2>
+      <dl class="skills">
+        <dt>Back-end</dt>
+        <dd>Node.js, TypeScript, Fastify, Prisma, BullMQ, PHP, Python</dd>
+        <dt>Front-end</dt>
+        <dd>React, React Native, Tailwind CSS, JavaScript, HTML e CSS</dd>
+        <dt>Banco de dados</dt>
+        <dd>PostgreSQL, MySQL, Redis, Firebase</dd>
+        <dt>Automação</dt>
+        <dd>n8n, WhatsApp Cloud API, webhooks</dd>
+        <dt>Ferramentas</dt>
+        <dd>Git, GitHub Actions, Docker, Linux</dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2>Experiência profissional</h2>
+
+      <div class="company">
+        <h3>Tijuca Alimentos</h3>
+        <span>Fortaleza, CE · Set 2022 — atual</span>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h4>Programador Júnior I</h4>
+          <span class="date">Mar 2025 — atual</span>
+        </div>
+        <ul>
+          <li>APIs REST em Node.js e TypeScript com Fastify e Prisma (PostgreSQL e MySQL).</li>
+          <li>Filas de processamento com BullMQ + Redis.</li>
+          <li>Automações no n8n integrando sistemas internos e WhatsApp.</li>
+          <li>Painéis em React para acompanhamento de operações.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h4>Analista de Suporte</h4>
+          <span class="date">Jun 2024 — Jun 2025</span>
+        </div>
+        <ul>
+          <li>Suporte técnico, diagnóstico e resolução de problemas em sistemas.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h4>Jovem Aprendiz — TI</h4>
+          <span class="date">Mar 2023 — Jun 2024</span>
+        </div>
+      </div>
+
+      <div class="job">
+        <div class="job-head">
+          <h4>Estagiário de TI</h4>
+          <span class="date">Set 2022 — Dez 2022</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Formação acadêmica</h2>
+      <div class="edu">
+        <h4>Tecnólogo em Análise e Desenvolvimento de Sistemas</h4>
+        <span>UniAteneu · Concluído</span>
+      </div>
+      <div class="edu">
+        <h4>Ensino Médio Integrado ao Técnico em Redes de Computadores</h4>
+        <span>EEEP Mário Alencar · Concluído</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Idiomas</h2>
+      <p>Português — Nativo</p>
+    </section>
+  </body>
+</html>
