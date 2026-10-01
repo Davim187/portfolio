@@ -2,6 +2,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { animate, motion, useInView, useReducedMotion } from "motion/react";
 import { stats } from "../data/content";
 import { Reveal, SectionHeading } from "./motion";
+import { LaptopSprite } from "./Pixel";
 
 function Counter({ value }: { value: number }) {
   const ref = useRef<HTMLElement>(null);
@@ -113,35 +114,38 @@ export function About() {
           </ul>
         </Reveal>
 
-        <Reveal className="code-card" delay={0.15} aria-label="Resumo em código">
-          <div className="code-card-header">
-            <span className="dot red"></span>
-            <span className="dot yellow"></span>
-            <span className="dot green"></span>
-            <span className="code-card-title">davi.ts</span>
+        <Reveal className="code-card-wrap" delay={0.15}>
+          <LaptopSprite />
+          <div className="code-card" aria-label="Resumo em código">
+            <div className="code-card-header">
+              <span className="dot red"></span>
+              <span className="dot yellow"></span>
+              <span className="dot green"></span>
+              <span className="code-card-title">davi.ts</span>
+            </div>
+            <motion.pre
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true, amount: 0.4 }}
+              variants={{ hidden: {}, show: { transition: { staggerChildren: 0.07, delayChildren: 0.3 } } }}
+            >
+              <code>
+                {codeLines.map((line, i) => (
+                  <motion.span
+                    key={i}
+                    className="code-line"
+                    variants={{ hidden: { opacity: 0, x: -12 }, show: { opacity: 1, x: 0 } }}
+                  >
+                    <span className="line-no" aria-hidden="true">
+                      {i + 1}
+                    </span>
+                    {line}
+                    {"\n"}
+                  </motion.span>
+                ))}
+              </code>
+            </motion.pre>
           </div>
-          <motion.pre
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, amount: 0.4 }}
-            variants={{ hidden: {}, show: { transition: { staggerChildren: 0.07, delayChildren: 0.3 } } }}
-          >
-            <code>
-              {codeLines.map((line, i) => (
-                <motion.span
-                  key={i}
-                  className="code-line"
-                  variants={{ hidden: { opacity: 0, x: -12 }, show: { opacity: 1, x: 0 } }}
-                >
-                  <span className="line-no" aria-hidden="true">
-                    {i + 1}
-                  </span>
-                  {line}
-                  {"\n"}
-                </motion.span>
-              ))}
-            </code>
-          </motion.pre>
         </Reveal>
       </div>
     </section>

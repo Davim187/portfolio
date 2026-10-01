@@ -1,6 +1,7 @@
 import { profile } from "../data/content";
 import { scrollToSection } from "../hooks/scroll";
 import { Magnetic, Reveal, SectionHeading } from "./motion";
+import { ContactSprite } from "./Pixel";
 
 export function Contact({ onCopyEmail }: { onCopyEmail: () => void }) {
   return (
@@ -8,6 +9,7 @@ export function Contact({ onCopyEmail }: { onCopyEmail: () => void }) {
       <SectionHeading accent="conversar?">Vamos</SectionHeading>
 
       <Reveal className="contact-content">
+        <ContactSprite />
         <p>
           Tem um processo manual que poderia rodar sozinho, uma integração para construir ou uma vaga que combina com o
           meu perfil? Me chama — respondo rápido.

@@ -18,6 +18,7 @@ Portfólio pessoal de **Davi Morais**, Desenvolvedor Full-Stack (Node.js, TypeSc
 [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) + [Vite](https://vite.dev/), com animações em [Motion](https://motion.dev/).
 
 - **Paleta de comandos** (`Ctrl K` / `⌘ K` ou `/`): navega pelas seções, troca o tema, copia o e-mail, baixa o currículo e abre links e projetos
+- **Davi em pixel art** espalhado pelo site e um **mini Davi** que fica no canto da tela: dá para arrastar, ele comenta a seção que você está vendo e pode ser escondido ou chamado de volta pela paleta (sprites em `public/assets/pixel/`)
 - Animações de entrada e de scroll, barra de progresso, foto com efeito 3D, botões magnéticos e brilho que segue o cursor (tudo respeitando `prefers-reduced-motion`)
 - Tema claro/escuro com preferência salva no navegador
 - Layout responsivo com menu mobile

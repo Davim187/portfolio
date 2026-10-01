@@ -4,6 +4,7 @@ import { profile, roles } from "../data/content";
 import { isMac, scrollToSection } from "../hooks/scroll";
 import { useTyping } from "../hooks/useTyping";
 import { Magnetic } from "./motion";
+import { HeroSprite } from "./Pixel";
 
 const container: Variants = {
   hidden: {},
@@ -153,6 +154,7 @@ export function Hero({ onOpenPalette }: { onOpenPalette: () => void }) {
             <i className={chip.icon}></i> {chip.label}
           </motion.div>
         ))}
+        <HeroSprite />
       </motion.div>
 
       <a

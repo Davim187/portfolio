@@ -20,6 +20,8 @@ type Props = {
   theme: Theme;
   onToggleTheme: () => void;
   onCopyEmail: () => void;
+  buddyVisible: boolean;
+  onToggleBuddy: () => void;
 };
 
 const normalize = (value: string) =>
@@ -30,7 +32,15 @@ const normalize = (value: string) =>
 
 const openUrl = (url: string) => window.open(url, "_blank", "noopener");
 
-export function CommandPalette({ open, onClose, theme, onToggleTheme, onCopyEmail }: Props) {
+export function CommandPalette({
+  open,
+  onClose,
+  theme,
+  onToggleTheme,
+  onCopyEmail,
+  buddyVisible,
+  onToggleBuddy,
+}: Props) {
   const [query, setQuery] = useState("");
   const [activeIndex, setActiveIndex] = useState(0);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -53,6 +63,14 @@ export function CommandPalette({ open, onClose, theme, onToggleTheme, onCopyEmai
         icon: theme === "dark" ? "bx bx-sun" : "bx bx-moon",
         keywords: "tema dark light escuro claro modo",
         run: onToggleTheme,
+      },
+      {
+        id: "buddy",
+        group: "Ações",
+        label: buddyVisible ? "Esconder o mini Davi" : "Chamar o mini Davi",
+        icon: "bx bx-happy-alt",
+        keywords: "mascote bonequinho pixel buddy personagem",
+        run: onToggleBuddy,
       },
       {
         id: "copy-email",
@@ -123,7 +141,7 @@ export function CommandPalette({ open, onClose, theme, onToggleTheme, onCopyEmai
         };
       }),
     ],
-    [theme, onToggleTheme, onCopyEmail]
+    [theme, onToggleTheme, onCopyEmail, buddyVisible, onToggleBuddy]
   );
 
   const filtered = useMemo(() => {

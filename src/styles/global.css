@@ -514,8 +514,8 @@ kbd {
 }
 
 .chip-2 {
-  top: 45%;
-  right: -16%;
+  top: 18%;
+  right: -20%;
 }
 
 .chip-3 {
@@ -638,7 +638,7 @@ kbd {
 }
 
 .code-line {
-  display: inline-block;
+  display: block;
 }
 
 .line-no {
@@ -1395,6 +1395,228 @@ kbd {
   50% { transform: translate(-50%, 8px); }
 }
 
+/* Pixel art */
+.hero-sprite,
+.laptop-sprite,
+.contact-sprite img,
+.buddy-sprite {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hero-sprite {
+  position: absolute;
+  right: -17%;
+  bottom: -4%;
+  height: 64%;
+  aspect-ratio: 326 / 720;
+  z-index: 2;
+  cursor: pointer;
+}
+
+.hero-sprite img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  filter: drop-shadow(0 10px 12px rgba(0, 0, 0, 0.35));
+}
+
+.sprite-shadow {
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 70%;
+  height: 10px;
+  translate: -50% 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.3);
+  filter: blur(3px);
+  z-index: -1;
+}
+
+.hero-sprite .sprite-shadow {
+  left: auto;
+  right: 0;
+  translate: none;
+}
+
+.sprite-bubble {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 64%;
+  translate: -50% 0;
+  padding: 0.3rem 0.7rem;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+  color: #0b1020;
+  background: #fff;
+  box-shadow:
+    0 -3px 0 #0b1020,
+    0 3px 0 #0b1020,
+    -3px 0 0 #0b1020,
+    3px 0 0 #0b1020;
+  pointer-events: none;
+}
+
+.sprite-bubble::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 9px;
+  height: 9px;
+  translate: -50% 0;
+  background: #fff;
+  box-shadow: 3px 3px 0 #0b1020;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 0);
+}
+
+.code-card-wrap {
+  position: relative;
+  min-width: 0;
+  margin-top: 5rem;
+}
+
+.laptop-sprite {
+  position: absolute;
+  right: 1.5rem;
+  bottom: calc(100% - 14px);
+  height: 132px;
+  width: auto;
+  z-index: 1;
+  pointer-events: none;
+  filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.3));
+}
+
+.contact-content {
+  position: relative;
+}
+
+.contact-sprite {
+  position: relative;
+  display: inline-block;
+  height: 150px;
+  margin-bottom: 1.25rem;
+}
+
+.contact-sprite img {
+  height: 100%;
+  width: auto;
+  transform-origin: 50% 100%;
+  filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.3));
+}
+
+.contact-sprite .sprite-bubble {
+  left: 70%;
+}
+
+.buddy-bounds {
+  position: fixed;
+  inset: 0.75rem;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.buddy {
+  position: fixed;
+  left: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 300;
+  width: 92px;
+  height: 120px;
+  touch-action: none;
+}
+
+.buddy-button {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: grab;
+}
+
+.buddy[data-mode="drag"] .buddy-button {
+  cursor: grabbing;
+}
+
+.buddy-sprite {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  translate: -50% 0;
+  height: 100%;
+  width: auto;
+  max-width: none;
+  pointer-events: none;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.35));
+}
+
+.buddy-sprite.buddy-talk {
+  left: auto;
+  right: -6px;
+  translate: none;
+}
+
+.buddy-bubble {
+  position: absolute;
+  width: min(270px, calc(100vw - 2.5rem));
+  padding: 0.85rem 0.95rem 0.55rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+  border: 2px solid var(--text);
+  box-shadow: 5px 5px 0 var(--accent);
+  cursor: default;
+  touch-action: auto;
+}
+
+.buddy[data-vertical="above"] .buddy-bubble {
+  bottom: calc(100% + 12px);
+}
+
+.buddy[data-vertical="below"] .buddy-bubble {
+  top: calc(100% + 12px);
+}
+
+.buddy[data-horizontal="left"] .buddy-bubble {
+  left: 0;
+}
+
+.buddy[data-horizontal="right"] .buddy-bubble {
+  right: 0;
+}
+
+.buddy-bubble-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.4rem;
+  margin-top: 0.55rem;
+}
+
+.buddy-bubble-actions button {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.15rem 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.buddy-bubble-actions button:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
 /* Responsive */
 @media (max-width: 960px) {
   .home {
@@ -1491,6 +1713,21 @@ kbd {
 
   .floating-chip {
     display: none;
+  }
+
+  .buddy {
+    left: 0.75rem;
+    bottom: 0.75rem;
+    width: 72px;
+    height: 96px;
+  }
+
+  .contact-sprite {
+    height: 120px;
+  }
+
+  .laptop-sprite {
+    height: 110px;
   }
 
   .stats {

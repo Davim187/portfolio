@@ -30,6 +30,42 @@ export const sections = [
 
 export type SectionId = (typeof sections)[number]["id"];
 
+export const pixel = {
+  standing: asset("assets/pixel/standing.webp"),
+  waving: asset("assets/pixel/waving.webp"),
+  laptop: asset("assets/pixel/laptop.webp"),
+  buddyIdle: asset("assets/pixel/buddy-idle.webp"),
+  buddyTalk: asset("assets/pixel/buddy-talk.webp"),
+  buddyDrag: asset("assets/pixel/buddy-drag.webp"),
+};
+
+export const buddyLines: Record<SectionId, string[]> = {
+  home: [
+    "Oi! Eu sou o mini Davi. Pode me arrastar pra onde quiser.",
+    "{palette}",
+  ],
+  about: [
+    "Comecei no suporte de TI e fui migrando pro desenvolvimento. Ver o problema do lado de quem usa faz toda a diferença.",
+    "Meu tipo favorito de sistema? O que roda sozinho e avisa quando algo dá errado.",
+  ],
+  experience: [
+    "Entrei na Tijuca Alimentos como jovem aprendiz e hoje sou programador lá.",
+    "Repara que a linha do tempo vai se preenchendo conforme você rola.",
+  ],
+  projects: [
+    "O Site Paroquial é o meu xodó: API, painel administrativo e controle de acesso por perfis.",
+    "Usa os filtros pra ver só os projetos full-stack ou só os de front-end.",
+  ],
+  skills: [
+    "Meu forte é o back-end: Node.js, TypeScript, filas com BullMQ e automação com n8n.",
+    "No front eu vou de React, e no mobile de React Native.",
+  ],
+  contact: [
+    "Bora conversar? Eu respondo rápido!",
+    "Clica no e-mail ali no cartão que ele já vai copiado.",
+  ],
+};
+
 export const stats = [
   { value: 4, label: "anos na área de TI" },
   { value: 10, label: "projetos publicados" },
