@@ -1,1 +1,4 @@
 curriculo/Currículo-antigo.pdf
+node_modules
+dist
+*.tsbuildinfo
