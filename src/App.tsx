@@ -8,6 +8,7 @@ import { About } from "./components/About";
 import { CommandPalette } from "./components/CommandPalette";
 import { Contact, Footer } from "./components/Contact";
 import { Experience } from "./components/Experience";
+import { GitHubPulse } from "./components/GitHubPulse";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { CursorGlow, ScrollProgress } from "./components/motion";
@@ -83,6 +84,7 @@ export default function App() {
         <Experience />
         <Projects />
         <Skills />
+        <GitHubPulse />
         <Contact onCopyEmail={copyEmail} />
       </main>
 

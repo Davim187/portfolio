@@ -106,6 +106,11 @@ export function Projects() {
                       <i className={link.icon}></i> {link.label}
                     </a>
                   ))}
+                  {project.links.length === 0 && (
+                    <span className="project-private">
+                      <i className="bx bx-lock-alt"></i> Código privado
+                    </span>
+                  )}
                 </div>
               </div>
             </motion.article>

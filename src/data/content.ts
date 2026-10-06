@@ -5,6 +5,7 @@ export const profile = {
   email: "daviimorais39@gmail.com",
   whatsapp: "https://wa.me/5585985707259",
   github: "https://github.com/Davim187",
+  githubUser: "Davim187",
   linkedin: "https://www.linkedin.com/in/davimorais-dev/",
   cv: asset("Currículo.pdf"),
   photo: asset("assets/fotoPerfil1.jpeg"),
@@ -25,6 +26,7 @@ export const sections = [
   { id: "experience", label: "Experiência", icon: "bx bx-briefcase" },
   { id: "projects", label: "Projetos", icon: "bx bx-code-block" },
   { id: "skills", label: "Stack", icon: "bx bx-layer" },
+  { id: "github", label: "GitHub", icon: "bx bxl-github" },
   { id: "contact", label: "Contato", icon: "bx bx-envelope" },
 ] as const;
 
@@ -59,6 +61,10 @@ export const buddyLines: Record<SectionId, string[]> = {
   skills: [
     "Meu forte é o back-end: Node.js, TypeScript, filas com BullMQ e automação com n8n.",
     "No front eu vou de React, e no mobile de React Native.",
+  ],
+  github: [
+    "Esses quadradinhos vêm direto do meu GitHub. Quanto mais forte o tom, mais commits naquele dia.",
+    "Passa o mouse no calendário pra ver o que rolou em cada dia.",
   ],
   contact: [
     "Bora conversar? Eu respondo rápido!",
@@ -132,6 +138,18 @@ export type Project = {
 };
 
 export const projects: Project[] = [
+  {
+    title: "GitPulse",
+    date: "Set 2026",
+    description:
+      "Bot de Discord que recebe os webhooks do GitHub e publica cada ação do repositório em um cartão no canal: push, feature publicada, pull request, issue e resultado do GitHub Actions. Confere a assinatura X-Hub-Signature-256, conecta repositórios a canais por slash commands e usa um secret por servidor.",
+    tech: ["TypeScript", "Node.js", "Discord.js", "Fastify", "Prisma", "PostgreSQL", "GitHub Webhooks"],
+    category: "fullstack",
+    featured: true,
+    badge: "Novo",
+    cover: { icon: "bx bxl-discord-alt", label: "GitHub → webhook → Discord", colors: ["#5865f2", "#24292f"] },
+    links: [],
+  },
   {
     title: "Site Paroquial",
     date: "Set 2026",

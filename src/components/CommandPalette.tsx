@@ -134,10 +134,10 @@ export function CommandPalette({
           id: `project-${p.title}`,
           group: "Projetos",
           label: p.title,
-          icon: link.icon,
-          hint: link.label,
+          icon: link?.icon ?? "bx bx-code-block",
+          hint: link?.label ?? "Ver card",
           keywords: `${p.tech.join(" ")} projeto`,
-          run: () => openUrl(link.url),
+          run: () => (link ? openUrl(link.url) : scrollToSection("projects")),
         };
       }),
     ],

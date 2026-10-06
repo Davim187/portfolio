@@ -4,7 +4,7 @@ import { stats } from "../data/content";
 import { Reveal, SectionHeading } from "./motion";
 import { LaptopSprite } from "./Pixel";
 
-function Counter({ value }: { value: number }) {
+export function Counter({ value }: { value: number }) {
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.8 });
   const reduceMotion = useReducedMotion();
