@@ -82,7 +82,8 @@ export function About() {
         <Reveal className="about-text">
           <h3>Automação, integrações e código fácil de manter</h3>
           <p>
-            Sou formado em Análise e Desenvolvimento de Sistemas pela UniAteneu e atuo como{" "}
+            Sou formado em Análise e Desenvolvimento de Sistemas pela UniAteneu, faço pós-graduação em Engenharia de
+            Software na Estácio e atuo como{" "}
             <strong>Programador Júnior</strong> na Tijuca Alimentos, onde comecei no suporte de TI e fui migrando para o
             desenvolvimento. Essa trajetória me deu algo valioso: entender o problema do lado de quem usa o sistema.
           </p>

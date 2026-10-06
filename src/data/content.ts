@@ -118,6 +118,7 @@ export const experiences: Experience[] = [
 ];
 
 export const education = [
+  { title: "Pós-graduação em Engenharia de Software", place: "Estácio · Em andamento", icon: "bx bx-book-reader" },
   { title: "Análise e Desenvolvimento de Sistemas", place: "UniAteneu · Concluído", icon: "bx bxs-graduation" },
   { title: "Técnico em Redes de Computadores", place: "EEEP Mário Alencar · Concluído", icon: "bx bx-network-chart" },
 ];
